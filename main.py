@@ -1,15 +1,12 @@
 import random
-from random import randrange
-import time
-from random import *
 
-test = 0
-min = 0
-max = 10
-limit = 10 # Set the limit of numbers generated
+try:
+    min = int(input("Min: "))
+    max = int(input("Max: "))
+    generated = int(input("Amount of numbers to generate: "))
 
-while test != limit:
-  print(randrange(min,max))
-  test = test + 1
-  if test >= limit:
-    break
+    for i in range(generated):
+      print(random.randint(min, max))
+      
+except ValueError as e:
+    print("Enter a number or I'll shoot you. ")
